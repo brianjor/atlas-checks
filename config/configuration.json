@@ -4,7 +4,7 @@
       "org.openstreetmap.atlas.checks.validation"
     ],
     "type": "org.openstreetmap.atlas.checks.base.BaseCheck",
-    "enabled.value.default": true
+    "enabled.value.default": false
   },
   "PoolSizeCheck": {
     "surface": {
@@ -351,6 +351,17 @@
         ]
       },
       "tags": "highway"
+    }
+  },
+  "IncorrectTagCheck":
+  {
+    "enabled": true,
+    "challenge": {
+      "description": "Tags that do not follow the typical format",
+      "blurb": "Incorrect tags",
+      "instruction": "Correct tags by making them follow the typical format of lowercase alphanumeric with no spaces. It's most likely not an expected tagging. It's possible a mapper was trying to map a feature with no existing agreed upon tagging. However, this should probably still conform to the typical format used for values of the given tag.",
+      "difficulty": "EASY",
+      "tags":"tags"
     }
   },
   "IntersectingBuildingsCheck":
